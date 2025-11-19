@@ -1,0 +1,748 @@
+@charset "UTF-8";
+
+/* hero section */
+#hero {
+  width: 100%;
+  height: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+#hero img {
+  width: 100%;
+  height: calc(100vh - 50px);
+  object-fit: cover;
+}
+
+#hero p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 150px;
+  letter-spacing: 3px;
+  line-height: 2;
+}
+
+/* サブページ用サブヒーローセクション */
+#subhero {
+  width: 100%;
+  height: auto;
+}
+
+#subhero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+#subhero p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 150px;
+  letter-spacing: 3px;
+  line-height: 2;
+}
+
+#hero p {
+  opacity: 0;
+  transition: all 1.2s;
+  transform: translateY(30px);
+}
+
+#hero p.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+
+  #hero,
+  #subhero {
+    padding-bottom: 60px;
+  }
+
+  #hero img,
+  #subhero img {
+    height: calc(50vh - 50px);
+    object-fit: cover;
+  }
+
+  #hero p,
+  #subhero p {
+    font-size: 1.3rem;
+    padding: 0 8% 60px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+}
+
+
+/* company section */
+#company {
+  width: 100%;
+  height: auto;
+  padding-bottom: 135px;
+}
+
+#company img {
+  width: 60%;
+  height: auto;
+}
+
+#company h2 {
+  font-size: 250%;
+  padding-bottom: 8px;
+  letter-spacing: 5px;
+}
+
+.company-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-content {
+  width: 40%;
+  height: auto;
+  margin-left: 120px;
+}
+
+.company-image,
+.products-image {
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.company-image.appear,
+.products-image.appear {
+  opacity: 1;
+}
+
+
+/* products section */
+#products {
+  width: 100%;
+  height: auto;
+  padding-bottom: 135px;
+}
+
+#products img {
+  width: 60%;
+  height: auto;
+}
+
+#products h2 {
+  font-size: 250%;
+  padding-bottom: 8px;
+  letter-spacing: 5px;
+}
+
+.products-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.products-content {
+  width: 40%;
+  height: auto;
+  margin-left: 120px;
+}
+
+/* スマホサイズ */
+@media (max-width: 768px) {
+
+  .company-inner,
+  .products-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #company img,
+  #products img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .company-content,
+  .products-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #company,
+  #products {
+    padding-bottom: 80px;
+  }
+
+  #company h2,
+  #products h2 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* charm section */
+#charm {
+  width: 100%;
+  height: auto;
+  background-color: #0161ad;
+  color: #fff;
+  text-align: center;
+  padding: 72px 0;
+  margin-bottom: 135px;
+}
+
+#charm h2 {
+  font-size: 250%;
+  padding-bottom: 6px;
+  letter-spacing: 3px;
+}
+
+#charm div {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#charm ul li {
+  text-align: left;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 32px;
+}
+
+#charm ul li:hover {
+  opacity: 0.6;
+}
+
+#charm ul li h3 {
+  padding-bottom: 8px;
+  font-size: 150%;
+}
+
+.selling-list {
+  transform: translateY(50px);
+}
+
+.content {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.content.wppear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+li:nth-child(1) {
+  transition-delay: 0s;
+}
+
+li:nth-child(2) {
+  transition-delay: .5s;
+}
+
+li:nth-child(3) {
+  transition-delay: 1s;
+}
+
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+  #charm {
+    padding: 48px 8%;
+    margin-bottom: 80px;
+  }
+
+  #charm div {
+    width: 80%;
+  }
+
+  #charm h2 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  #charm ul {
+    text-align: center;
+  }
+
+  #charm ul li {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* solution section */
+#solution {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-bottom: 135px;
+}
+
+#solution h2 {
+  font-size: 200%;
+  padding-bottom: 6px;
+  letter-spacing: 3px;
+}
+
+#solution .section-subtitle {
+  padding-bottom: 64px;
+}
+
+.solutions-box {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.solution-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.solution-image {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.solution-title {
+  font-size: 130%;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.solution-text {
+  font-size: 100%;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+
+  /* solution */
+  .solutions-box {
+    width: 60%;
+  }
+
+  .solution-list {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .solution-image {
+    width: 40%;
+  }
+
+  .solution-title {
+    font-size: 1.1rem;
+  }
+
+  .solution-text {
+    font-size: 0.95rem;
+  }
+
+  #solution {
+    padding-bottom: 80px;
+  }
+
+  #solution h2 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* news section */
+#news {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 135px 0;
+}
+
+.news-bg {
+  background-color: #ffffff;
+  background-image: linear-gradient(45deg, #0161ad1a 25%, transparent 25%, transparent 75%, #0161ad1a 75%), linear-gradient(45deg, #0161ad1a 25%, transparent 25%, transparent 75%, #0161ad1a 75%);
+  background-position: 10px 10px, 14px 14px;
+  background-size: 8px 8px;
+}
+
+#news div {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#news h2 {
+  font-size: 250%;
+  padding-bottom: 6px;
+  letter-spacing: 3px;
+}
+
+#news ul li {
+  text-align: left;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #020202;
+  margin-bottom: 32px;
+}
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+  #news {
+    padding: 80px 0;
+  }
+
+  #news div {
+    width: 60%;
+  }
+
+  #news h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  #news ul li {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* contact section */
+#contact {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 200%;
+  padding-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #ff6600;
+  font-size: 12px;
+  margin-left: 6px;
+  padding: 2px 6px;
+  background: #ffac4e27;
+  border-radius: 3px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #0161ad;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+.privacy-check {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.privacy-check input {
+  margin-right: 8px;
+}
+
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+  #contact {
+    padding: 32px 16px;
+  }
+
+  #contact h2 {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+}
+
+
+/* 会社概要のページ */
+/* MISSION section */
+.mission-section {
+  width: 100%;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.mission-inner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-section .section-title {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  padding-bottom: 8px;
+}
+
+.mission-section .section-subtitle {
+  padding-bottom: 32px;
+}
+
+.mission-text {
+  font-size: 1.3rem;
+  line-height: 2.2;
+  letter-spacing: 2px;
+  font-family: "Noto Serif JP", serif;
+}
+
+@media (max-width: 768px) {
+  .mission-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+}
+
+
+/* VISION section */
+.vision-section {
+  width: 100%;
+  padding-bottom: 120px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.vision-inner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vision-section .section-title {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  padding-bottom: 8px;
+}
+
+.vision-section .section-subtitle {
+  padding-bottom: 32px;
+  font-weight: 600;
+}
+
+.vision-text {
+  font-size: 1.3rem;
+  line-height: 2.2;
+  letter-spacing: 2px;
+  font-family: "Noto Serif JP", serif;
+}
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+  .vision-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+}
+
+
+/* VALUE section */
+.value-section {
+  width: 100%;
+  padding: 120px 0;
+  background-color: #f7f9fc;
+}
+
+.value-inner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.value-section .section-title {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  padding-bottom: 8px;
+}
+
+.value-section .section-subtitle {
+  padding-bottom: 32px;
+  font-weight: 600;
+}
+
+/* value items */
+.value-list {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 40px;
+}
+
+.value-item h3 {
+  font-size: 1.3rem;
+  color: #0161ad;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.value-item p {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-family: "Noto Serif JP", serif;
+}
+
+/* スマホ画面 */
+@media (max-width: 768px) {
+  .value-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .value-item p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* 会社概要 */
+.law {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0;
+  height: auto;
+  background-color: #003b6b;
+  color: #fff;
+  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.law-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.law-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.law-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.law-table th,
+.law-table td {
+  border: 1px solid #ffffff;
+  padding: 16px 24px;
+  vertical-align: top;
+  line-height: 1.8;
+  font-size: 1.3rem;
+}
+
+.law-table th {
+  width: 28%;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.law-table td {
+  width: 72%;
+}
+
+/* SP用（〜768px） */
+@media screen and (max-width: 768px) {
+  .law-section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .law-title {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .law-table,
+  .law-table tbody,
+  .law-table tr,
+  .law-table th,
+  .law-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .law-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background: none;
+  }
+
+  .law-table tr {
+    margin-bottom: 16px;
+    border: 1px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .law-table th {
+    border-bottom: 1px solid #ffffff;
+    padding: 10px 14px;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+  }
+
+  .law-table td {
+    border: none;
+    padding: 10px 14px 14px;
+    font-size: 0.9rem;
+  }
+}
