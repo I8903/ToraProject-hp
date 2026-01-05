@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* =========================
+   Privacy Policy
+========================= */
+
+.privacy-policy {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 20px;
+    line-height: 1.8;
+    color: #222;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* 見出し */
+.privacy-policy h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.privacy-policy h2 {
+    font-size: 20px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 4px solid #1f3a8a;
+    /* ネイビー */
+    font-weight: 600;
+}
+
+/* テキスト */
+.privacy-policy p {
+    margin-bottom: 16px;
+}
+
+/* リスト */
+.privacy-policy ul {
+    margin: 16px 0 24px 24px;
+    padding: 0;
+}
+
+.privacy-policy li {
+    margin-bottom: 8px;
+}
+
+/* 定義リスト（会社情報） */
+.privacy-policy dl {
+    margin-top: 24px;
+}
+
+.privacy-policy dt {
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.privacy-policy dd {
+    margin-left: 0;
+    margin-top: 4px;
+}
+
+/* リンク */
+.privacy-policy a {
+    color: #1f3a8a;
+    text-decoration: underline;
+}
+
+.privacy-policy a:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media screen and (max-width: 767px) {
+    .privacy-policy {
+        padding: 48px 16px;
+        font-size: 15px;
+    }
+
+    .privacy-policy h1 {
+        font-size: 26px;
+    }
+
+    .privacy-policy h2 {
+        font-size: 18px;
+    }
+}

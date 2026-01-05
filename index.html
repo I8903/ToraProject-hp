@@ -12,8 +12,8 @@
   <meta name="keywords" content="TORAPROJECT,Web制作,プログラミングスクール,営業スクール,営業代行,清掃代行,法人向けサービス">
 
   <!----- ファビコン・Web App ----->
-  <link rel="icon" href="/assets/img/hp_logo.PNG">
-  <link rel="apple-touch-icon" href="/assets/img/hp_logo.PNG">
+  <link rel="icon" href="/assets/img/fv_logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/fv_logo.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <!----- OGP（SNSシェア対策） ----->
@@ -22,7 +22,7 @@
     content="Web制作、プログラミングスクール、営業スクール、法人向け営業代行、清掃代行まで幅広くサポート。スキル習得から業務支援まで、企業と個人の成長を後押しする総合サービス企業です。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.toraproject.jp/">
-  <meta property="og:image" content="https://www.toraproject.jp/assets/img/hp_logo.PNG">
+  <meta property="og:image" content="https://www.toraproject.jp/assets/img/hp_logo.png">
   <meta property="og:site_name" content="TORAPROJECT株式会社">
   <meta property="og:locale" content="ja_JP">
 
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TORAPROJECT株式会社 | Web制作・プログラミングスクール・営業スクール">
   <meta name="twitter:description" content="未経験からのスキル習得から、法人向けサービス（営業代行・清掃代行）まで包括的に支援します。">
-  <meta name="twitter:image" content="https://www.toraproject.jp/assets/img/hp_logo.PNG">
+  <meta name="twitter:image" content="https://www.toraproject.jp/assets/img/hp_logo.png">
 
   <!----- フォント読み込み ----->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,7 @@
 
       <h1>
         <a href="index.html" aria-label="TORAPROJECT株式会社 ホーム">
-          <img src="assets/img/hp_logo.PNG" alt="TORAPROJECT株式会社のロゴ">
+          <img src="assets/img/hp_logo.png" alt="TORAPROJECT株式会社のロゴ">
         </a>
       </h1>
 
@@ -265,35 +265,46 @@
     <!----- お問い合わせ ----->
     <section id="contact">
       <h2>お問い合わせ</h2>
-      <form class="contactForm" action="send.php" method="post">
+      <form class="contactForm" action="https://api.staticforms.dev/submit" method="post">
+
+        <!-- StaticForms 必須 -->
+        <input type="hidden" name="apiKey" value="sf_j0071c7fmfah97k6cmf5gh57">
+        <input type="hidden" name="redirectTo" value="https://example.com/thanks.html">
+        <input type="hidden" name="subject" value="お問い合わせが届きました">
+        <input type="hidden" name="honeypot" value="">
 
         <div class="form-group">
-          <label for="name">お名前<span class="required">必須</span></label>
-          <input type="text" id="name" name="name" placeholder="山田 太郎" readonly>
-        </div>
-        <div class="form-group">
-          <label for="email">メールアドレス<span class="required">必須</span></label>
-          <input type="email" id="email" name="email" placeholder="example@mail.com" readonly>
-        </div>
-        <div class="form-group">
-          <label for="tel">電話番号<span class="required">必須</span></label>
-          <input type="tel" id="tel" name="tel" placeholder="09012345678" readonly>
-        </div>
-        <div class="form-group">
-          <label for="message">お問い合わせ内容<span class="required">必須</span></label>
-          <textarea type="message" id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください"
-            readonly></textarea>
+          <label class="label" for="name">お名前<span class="required">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required>
         </div>
 
-        <!----- プライバシーポリシー ----->
+        <div class="form-group">
+          <label class="label" for="email">メールアドレス<span class="required">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="tel">電話番号<span class="required">必須</span></label>
+          <input type="tel" id="tel" name="tel" placeholder="09012345678" required>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="message">お問い合わせ内容<span class="required">必須</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+        </div>
+
         <div class="form-group privacy-check">
-          <label for="message"><span class="required">プライバシーポリシーに同意する</span>
+          <label class="checkbox-label">
+            <input class="checkbox-input" type="checkbox" name="agree" required>
+            <a href="privacy.html" target="_blank">
+              プライバシーポリシーに同意する
+            </a>
           </label>
         </div>
 
-        <!----- 送信ボタン ----->
         <button type="submit" class="submit-btn">送信する</button>
       </form>
+
     </section>
   </main>
 
@@ -307,8 +318,11 @@
         <div class="footer-links">
           <ul>
             <li><a href="index.html">トップ</a></li>
-            <li><a href="comoany.html">会社概要</a></li>
-            <li><a href="products.html">事業内容</a></li>
+            <li><a href="comoany.html" target="_blank">会社概要</a></li>
+            <li><a href="products.html" target="_blank">事業内容</a></li>
+            <li><a href="privacy.html" target="_blank">プライバシーポリシー</a></li>
+            <li><a href="terms.html" target="_blank">利用規約</a></li>
+            <li><a href="law.html" target="_blank">特商法</a></li>
             <li><a href="index.html#contact">お問い合わせ</a></li>
           </ul>
         </div>

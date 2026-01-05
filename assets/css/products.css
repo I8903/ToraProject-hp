@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+/* =========================
+  products.css
+  事業内容ページ用スタイル
+========================= */
+
+:root {
+    --container: 1100px;
+    --gutter: 24px;
+    --radius: 16px;
+
+    --text: #0f172a;
+    --muted: #475569;
+    --line: rgba(15, 23, 42, .12);
+
+    --bg: #ffffff;
+    --soft: #f8fafc;
+
+    /* ブランドカラーっぽく（ネイビー×ゴールド） */
+    --navy: #0b1b3a;
+    --gold: #c6a15b;
+}
+
+/* ベース */
+.products-fv,
+.products-strength,
+.products-section,
+.products-flow,
+.products-cta {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.sec-padding {
+    padding: 72px 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+p {
+    margin: 0 0 16px;
+    line-height: 1.8;
+}
+
+.lead {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 760px;
+}
+
+/* =========================
+  FV
+========================= */
+.products-fv {
+    position: relative;
+    padding: 88px 0 64px;
+    background:
+        radial-gradient(900px 500px at 20% 10%, rgba(198, 161, 91, .18), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(11, 27, 58, .12), transparent 60%),
+        var(--soft);
+    border-bottom: 1px solid var(--line);
+}
+
+.products-fv .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .18em;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.products-fv h1 {
+    font-size: clamp(28px, 3vw, 40px);
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.products-fv .lead {
+    margin-bottom: 28px;
+}
+
+/* 3カード */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.service-cards .card {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-cards .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(198, 161, 91, .18), transparent 55%);
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(11, 27, 58, .25);
+    box-shadow: 0 18px 50px rgba(2, 6, 23, .10);
+}
+
+.service-cards .card:hover::before {
+    opacity: 1;
+}
+
+.service-cards .card h3 {
+    position: relative;
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.service-cards .card p {
+    position: relative;
+    margin: 0;
+    font-size: .95rem;
+}
+
+/* =========================
+  強み
+========================= */
+.products-strength {
+    background: #fff;
+}
+
+.strength-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+}
+
+.strength-list li {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+}
+
+.strength-list h3 {
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.strength-list p {
+    margin: 0;
+}
+
+/* =========================
+  各事業セクション
+========================= */
+.products-section {
+    background: #fff;
+    border-top: 1px solid var(--line);
+}
+
+.products-section:nth-of-type(even) {
+    background: var(--soft);
+}
+
+.products-section h2 {
+    font-size: clamp(22px, 2.2vw, 30px);
+    color: var(--navy);
+}
+
+.products-section h3 {
+    font-size: 1.02rem;
+    color: var(--navy);
+    margin-top: 26px;
+}
+
+.products-section ul {
+    margin: 10px 0 0;
+    padding-left: 1.1em;
+    color: var(--muted);
+}
+
+.products-section li {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+/* アンカーで飛んだときに見出しが隠れない用 */
+#school,
+#web,
+#sales {
+    scroll-margin-top: 90px;
+}
+
+/* =========================
+  ご依頼の流れ
+========================= */
+.products-flow {
+    background: #fff;
+    border-top: 1px solid var(--line);
+}
+
+.flow-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: grid;
+    gap: 12px;
+    max-width: 820px;
+}
+
+.flow-list li {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 16px;
+    display: grid;
+    gap: 6px;
+}
+
+.flow-list strong {
+    color: var(--navy);
+}
+
+/* =========================
+  CTA
+========================= */
+.products-cta {
+    background: linear-gradient(135deg, rgba(11, 27, 58, .95), rgba(11, 27, 58, .85));
+    color: #fff;
+    padding: 76px 0;
+}
+
+.products-cta h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.products-cta p {
+    color: rgba(255, 255, 255, .82);
+    max-width: 760px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+
+    background: linear-gradient(135deg, var(--gold), #e7c77d);
+    color: #1b2537;
+
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .22);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .26);
+}
+
+/* =========================
+  レスポンシブ
+========================= */
+@media (max-width: 960px) {
+    section {
+        padding: 64px 0;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    :root {
+        --gutter: 18px;
+    }
+
+    .products-fv {
+        padding: 72px 0 56px;
+    }
+
+    .service-cards .card {
+        padding: 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
