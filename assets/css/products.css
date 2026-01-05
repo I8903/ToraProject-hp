@@ -142,41 +142,22 @@ p {
 
 .service-cards .card p {
     position: relative;
-    margin: 0;
     font-size: .95rem;
 }
 
-/* =========================
-  強み
-========================= */
-.products-strength {
-    background: #fff;
+.card-link {
+    margin: 16px auto 0;
+    text-align: end;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ff8c00;
+    align-self: flex-end;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.strength-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    list-style: none;
-    padding: 0;
-    margin: 24px 0 0;
-}
-
-.strength-list li {
-    background: var(--soft);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 18px;
-}
-
-.strength-list h3 {
-    font-size: 1rem;
-    color: var(--navy);
-    margin-bottom: 10px;
-}
-
-.strength-list p {
-    margin: 0;
+.card:hover .card-link {
+    transform: translateX(4px);
+    opacity: 0.8;
 }
 
 /* =========================
