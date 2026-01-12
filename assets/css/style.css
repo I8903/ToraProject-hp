@@ -15,7 +15,6 @@
 
 #hero img {
   width: 100%;
-  height: calc(100vh - 50px);
   object-fit: cover;
 }
 
@@ -79,7 +78,6 @@
     padding-bottom: 32px;
   }
 
-  #hero img,
   #subhero img {
     height: calc(80vh - 50px);
     object-fit: cover;
